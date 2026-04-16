@@ -4,7 +4,7 @@
 
 Distributed lock primitives for Go services that need fencing tokens, not just lease ownership.
 
-`fencelock` is a small extraction from Hopen's concurrency tooling. It is built around the correctness rule that matters for TTL-based distributed locks: every successful acquisition returns a monotonically increasing fencing token, and protected resources must reject writes with stale tokens.
+`fencelock` is a small Go library for distributed locking with fencing tokens. It is built around the correctness rule that matters for TTL-based distributed locks: every successful acquisition returns a monotonically increasing fencing token, and protected resources must reject writes with stale tokens.
 
 ## Why Fencing Tokens Matter
 
